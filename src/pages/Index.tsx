@@ -39,7 +39,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="sticky top-0 z-20 bg-card border-b border-border px-4 py-3">
-        <h1 className="text-lg font-bold text-foreground">🍽️ Punjab Kitchenn, Dhanbad</h1>
+        <h1 className="text-lg font-bold text-foreground">🍽️ The city Hut, Dhanbad</h1>
       </header>
 
       {/* Search Bar */}

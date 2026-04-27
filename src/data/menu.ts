@@ -120,6 +120,49 @@ import extraGreenSalad from "@/assets/menu/extra-green-salad.jpg";
 import extraMasalaPapad from "@/assets/menu/extra-masala-papad.jpg";
 import extraFryPapad from "@/assets/menu/extra-fry-papad.jpg";
 
+// Chinese Noodles & Chopsuey
+import chineseVegChopsuey from "@/assets/menu/chinese-veg-chopsuey.jpg";
+import chineseAmericanChopsuey from "@/assets/menu/chinese-american-chopsuey.jpg";
+import chineseVegNoodles from "@/assets/menu/chinese-veg-noodles.jpg";
+import chineseVegHakkaNoodles from "@/assets/menu/chinese-veg-hakka-noodles.jpg";
+import chinesePaneerNoodles from "@/assets/menu/chinese-paneer-noodles.jpg";
+import chineseMushroomNoodles from "@/assets/menu/chinese-mushroom-noodles.jpg";
+import chineseSchezwanNoodles from "@/assets/menu/chinese-schezwan-noodles.jpg";
+import chineseMixVegNoodles from "@/assets/menu/chinese-mix-veg-noodles.jpg";
+import chineseChickenNoodles from "@/assets/menu/chinese-chicken-noodles.jpg";
+import chineseEggNoodles from "@/assets/menu/chinese-egg-noodles.jpg";
+import chineseMixNonvegNoodles from "@/assets/menu/chinese-mix-nonveg-noodles.jpg";
+
+// Pasta
+import pastaVegSauce from "@/assets/menu/pasta-veg-sauce.jpg";
+import pastaRedSauce from "@/assets/menu/pasta-red-sauce.jpg";
+import pastaPaneer from "@/assets/menu/pasta-paneer.jpg";
+import pastaMushroom from "@/assets/menu/pasta-mushroom.jpg";
+import pastaWhiteSauce from "@/assets/menu/pasta-white-sauce.jpg";
+import pastaChicken from "@/assets/menu/pasta-chicken.jpg";
+import pastaEgg from "@/assets/menu/pasta-egg.jpg";
+import pastaMixNonveg from "@/assets/menu/pasta-mix-nonveg.jpg";
+
+// Rolls
+import rollVeg from "@/assets/menu/roll-veg.jpg";
+import rollPaneer from "@/assets/menu/roll-paneer.jpg";
+import rollSpring from "@/assets/menu/roll-spring.jpg";
+import rollVegMix from "@/assets/menu/roll-veg-mix.jpg";
+import rollEgg from "@/assets/menu/roll-egg.jpg";
+import rollChicken from "@/assets/menu/roll-chicken.jpg";
+import rollEggChicken from "@/assets/menu/roll-egg-chicken.jpg";
+
+// Pizza
+import pizzaVeg from "@/assets/menu/pizza-veg.jpg";
+import pizzaTomato from "@/assets/menu/pizza-tomato.jpg";
+import pizzaPaneer from "@/assets/menu/pizza-paneer.jpg";
+import pizzaCheeseCorn from "@/assets/menu/pizza-cheese-corn.jpg";
+import pizzaMixVeg from "@/assets/menu/pizza-mix-veg.jpg";
+
+// Category fallbacks for new categories
+import catPasta from "@/assets/menu/cat-pasta.jpg";
+import catPizza from "@/assets/menu/cat-pizza.jpg";
+
 // Beverages
 import bevSoftDrink from "@/assets/menu/bev-soft-drink.jpg";
 import bevMojito from "@/assets/menu/bev-mojito.jpg";
@@ -170,6 +213,10 @@ export const categoryImages: Record<string, string> = {
   thali: catThali,
   extra: catExtra,
   beverage: catBeverage,
+  pasta: catPasta,
+  pizza: catPizza,
+  rolls: rollVeg,
+  "testy-chinese": chineseVegHakkaNoodles,
 };
 
 // Unique images per menu item (by ID)
@@ -423,6 +470,45 @@ export const itemImages: Record<number, string> = {
   708: bevMilkshakeIcecream, // Milk Shake
   709: bevMilkshakeIcecream,
   710: bevColdCoffee,
+
+  // Chinese Noodles & Chopsuey
+  2001: chineseVegChopsuey,
+  2002: chineseAmericanChopsuey,
+  2003: chineseVegNoodles,
+  2004: chineseVegHakkaNoodles,
+  2005: chinesePaneerNoodles,
+  2006: chineseMushroomNoodles,
+  2007: chineseSchezwanNoodles,
+  2008: chineseMixVegNoodles,
+  2009: chineseChickenNoodles,
+  2010: chineseEggNoodles,
+  2011: chineseMixNonvegNoodles,
+
+  // Pasta
+  2020: pastaVegSauce,
+  2021: pastaRedSauce,
+  2022: pastaPaneer,
+  2023: pastaMushroom,
+  2024: pastaWhiteSauce,
+  2025: pastaChicken,
+  2026: pastaEgg,
+  2027: pastaMixNonveg,
+
+  // Rolls (snacks)
+  2030: rollVeg,
+  2031: rollPaneer,
+  2032: rollSpring,
+  2033: rollVegMix,
+  2034: rollEgg,
+  2035: rollChicken,
+  2036: rollEggChicken,
+
+  // Pizza
+  2040: pizzaVeg,
+  2041: pizzaTomato,
+  2042: pizzaPaneer,
+  2043: pizzaCheeseCorn,
+  2044: pizzaMixVeg,
 };
 
 export interface Category {
@@ -446,6 +532,10 @@ export const categories: Category[] = [
   { id: "thali", label: "Thali" },
   { id: "extra", label: "Extra" },
   { id: "beverage", label: "Beverages" },
+  { id: "pasta", label: "Pasta Counter" },
+  { id: "pizza", label: "Pizza" },
+  { id: "rolls", label: "Rolls" },
+  { id: "testy-chinese", label: "Testy Chinese" },
 ];
 
 export const menuItems: MenuItem[] = [
@@ -682,4 +772,43 @@ export const menuItems: MenuItem[] = [
   { id: 708, name: "Milk Shake", category: "beverage", type: "veg", price: 100, tags: [], emoji: "​", quantity: 0 },
   { id: 709, name: "Milk Shake with Ice Cream", category: "beverage", type: "veg", price: 140, tags: ["special"], emoji: "​", quantity: 0 },
   { id: 710, name: "Cold Coffee", category: "beverage", type: "veg", price: 100, tags: [], emoji: "​", quantity: 0 },
+
+  // TESTY CHINESE - Noodles & Chopsuey
+  { id: 2001, name: "Veg Chopsuey", category: "testy-chinese", type: "veg", price: 180, tags: [], emoji: "🥢", quantity: 0 },
+  { id: 2002, name: "American Chopsuey", category: "testy-chinese", type: "veg", price: 220, tags: ["popular"], emoji: "🥢", quantity: 0 },
+  { id: 2003, name: "Veg Noodles", category: "testy-chinese", type: "veg", price: 120, tags: [], emoji: "🍜", quantity: 0 },
+  { id: 2004, name: "Veg Hakka Noodles", category: "testy-chinese", type: "veg", price: 130, tags: [], emoji: "🍜", quantity: 0 },
+  { id: 2005, name: "Paneer Noodles", category: "testy-chinese", type: "veg", price: 150, tags: [], emoji: "🧀", quantity: 0 },
+  { id: 2006, name: "Mushroom Noodles", category: "testy-chinese", type: "veg", price: 150, tags: [], emoji: "🍄", quantity: 0 },
+  { id: 2007, name: "Veg Schezwan Noodles", category: "testy-chinese", type: "veg", price: 130, tags: ["spicy"], emoji: "🍜", quantity: 0 },
+  { id: 2008, name: "Mix Veg Noodles", category: "testy-chinese", type: "veg", price: 170, tags: [], emoji: "🍜", quantity: 0 },
+  { id: 2009, name: "Chicken Noodles", category: "testy-chinese", type: "non-veg", price: 180, tags: [], emoji: "🍗", quantity: 0 },
+  { id: 2010, name: "Egg Noodles", category: "testy-chinese", type: "non-veg", price: 160, tags: [], emoji: "🍳", quantity: 0 },
+  { id: 2011, name: "Mix Non-Veg Noodles", category: "testy-chinese", type: "non-veg", price: 190, tags: ["special"], emoji: "🍗", quantity: 0 },
+
+  // PASTA COUNTER
+  { id: 2020, name: "Veg Sauce Pasta", category: "pasta", type: "veg", price: 160, tags: [], emoji: "🍝", quantity: 0 },
+  { id: 2021, name: "Red Sauce Pasta", category: "pasta", type: "veg", price: 160, tags: [], emoji: "🍝", quantity: 0 },
+  { id: 2022, name: "Paneer Pasta", category: "pasta", type: "veg", price: 180, tags: [], emoji: "🧀", quantity: 0 },
+  { id: 2023, name: "Mushroom Pasta", category: "pasta", type: "veg", price: 180, tags: [], emoji: "🍄", quantity: 0 },
+  { id: 2024, name: "White Sauce Pasta", category: "pasta", type: "veg", price: 200, tags: ["creamy"], emoji: "🍝", quantity: 0 },
+  { id: 2025, name: "Chicken Pasta", category: "pasta", type: "non-veg", price: 180, tags: [], emoji: "🍗", quantity: 0 },
+  { id: 2026, name: "Egg Pasta", category: "pasta", type: "non-veg", price: 170, tags: [], emoji: "🍳", quantity: 0 },
+  { id: 2027, name: "Mix Non-Veg Pasta", category: "pasta", type: "non-veg", price: 200, tags: ["special"], emoji: "🍗", quantity: 0 },
+
+  // ROLLS (under snacks)
+  { id: 2030, name: "Veg Roll", category: "rolls", type: "veg", price: 60, tags: [], emoji: "🌯", quantity: 0 },
+  { id: 2031, name: "Paneer Roll", category: "rolls", type: "veg", price: 100, tags: [], emoji: "🧀", quantity: 0 },
+  { id: 2032, name: "Spring Roll", category: "rolls", type: "veg", price: 200, tags: [], emoji: "🌯", quantity: 0 },
+  { id: 2033, name: "Veg Mix Roll", category: "rolls", type: "veg", price: 110, tags: [], emoji: "🌯", quantity: 0 },
+  { id: 2034, name: "Egg Roll", category: "rolls", type: "non-veg", price: 80, tags: [], emoji: "🍳", quantity: 0 },
+  { id: 2035, name: "Chicken Roll", category: "rolls", type: "non-veg", price: 100, tags: [], emoji: "🍗", quantity: 0 },
+  { id: 2036, name: "Egg Chicken Roll", category: "rolls", type: "non-veg", price: 120, tags: ["popular"], emoji: "🍗", quantity: 0 },
+
+  // PIZZA
+  { id: 2040, name: "Veg Pizza", category: "pizza", type: "veg", price: 180, tags: [], emoji: "🍕", quantity: 0 },
+  { id: 2041, name: "Tomato Pizza", category: "pizza", type: "veg", price: 180, tags: [], emoji: "🍕", quantity: 0 },
+  { id: 2042, name: "Paneer Pizza", category: "pizza", type: "veg", price: 200, tags: ["popular"], emoji: "🧀", quantity: 0 },
+  { id: 2043, name: "Cheese Corn Pizza", category: "pizza", type: "veg", price: 200, tags: ["cheesy"], emoji: "🍕", quantity: 0 },
+  { id: 2044, name: "Mix Veg Pizza", category: "pizza", type: "veg", price: 220, tags: ["special"], emoji: "🍕", quantity: 0 },
 ];
